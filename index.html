@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#1a5f3f">
+    <title>Salat Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🕌 Salat Tracker</h1>
+            <div class="date-info" id="dateInfo"></div>
+            <div class="location-info">
+                📍 <span id="location">Loading location...</span>
+            </div>
+        </div>
+
+        <div class="current-time">
+            <div class="time" id="currentTime"></div>
+            <div class="next-prayer" id="nextPrayer"></div>
+        </div>
+
+        <div class="forbidden-banner" id="forbiddenBanner">
+            ⚠️ Forbidden Time - Prayer is prohibited during this period
+        </div>
+
+        <div id="prayersList" class="loading">
+            <div class="spinner"></div>
+            <p>Loading prayer times...</p>
+        </div>
+
+        <div class="missed-section" id="missedSection" style="display: none;">
+            <h2>⚠️ Missed Prayers</h2>
+            <div class="missed-prayers-grid" id="missedPrayersGrid"></div>
+        </div>
+
+        <div class="stats-section">
+            <h3 style="text-align: center;">Today's Progress</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value" id="completedCount">0</div>
+                    <div class="stat-label">Prayers Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="remainingCount">5</div>
+                    <div class="stat-label">Remaining Today</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="install-prompt" id="installPrompt">
+        Add Salat Tracker to your home screen for quick access!
+        <button onclick="installApp()">Install</button>
+        <button onclick="dismissInstall()">Later</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
